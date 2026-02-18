@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right, black,darkblue,black);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-size: 500%;
+    animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: backgroundanimate;
+}
+/* animating the background */
+@keyframes backgroundanimate {
+    0%   {background-position: 0 0;}
+    25% {background-position: 50% 0;}
+    50% {background-position: 90% 0;}
+    60% {background-position: 60%;}
+    75% {background-position: 40%;}
+    100%  {background-position: 0 0;}
+}
+.fontsize{
+    font-size: 20px;
+    
+}
+.creatediv{
+    width: 58vw;
+    min-height: 35px;         
+    background-color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    padding: 8px 12px;        
+    display: flex;            
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-sizing: border-box;
+}
+.creatediv.editing {
+    flex-direction: column;
+    align-items: stretch;
+}
+input{
+    height: 40px;
+    width: 180px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+.spin::-webkit-inner-spin-button,
+.spin::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+input::placeholder{
+    color: white;
+    font-weight: medium;
+    text-align: center;
+}
+input:focus{
+    outline: none;
+    transform: scale(1.1);
+}
+button{
+    background-color: rgb(80, 178, 80);
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: transform 0.3s;
+    color: white;
+    
+}
+button:hover{
+    transform: scale(1.1);
+    color: black;
+}
+
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.edit-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+
+@media (min-width: 768px){
+   .maindiv{
+    border: 2px solid grey;
+   }
+   .fontsize{
+    font-size: 30px;
+   }
+}
